@@ -1,0 +1,11 @@
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\bin\Debug\Akinin_Stanislav_Test_Task_Yolva.exe.config
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\bin\Debug\Akinin_Stanislav_Test_Task_Yolva.exe
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\bin\Debug\Akinin_Stanislav_Test_Task_Yolva.pdb
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\obj\Debug\Akinin_Stanislav_Test_Task_Yolva.csprojAssemblyReference.cache
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\obj\Debug\Akinin_Stanislav_Test_Task_Yolva.csproj.CopyComplete
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\obj\Debug\Akinin_Stanislav_Test_Task_Yolva.exe
+C:\Users\Hanno\Desktop\Akinin_Stanislav_Test_Task_Yolva\Akinin_Stanislav_Test_Task_Yolva\obj\Debug\Akinin_Stanislav_Test_Task_Yolva.pdb
