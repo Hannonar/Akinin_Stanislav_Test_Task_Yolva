@@ -43,20 +43,19 @@ namespace Akinin_Stanislav_Test_Task_Yolva
 
                 Console.WriteLine("Ответ API получен");
 
-                var listOfRegions = await responseMessage.Content.ReadAsAsync<IList<OSMRegionExternal>>();
+                var responce = await responseMessage.Content.ReadAsStringAsync();
+
+                RegionInternal region = RegionConverter.ProcessMessage(responce);
 
                 Console.WriteLine("Ответ десериализован");
 
-                var Regions = listOfRegions.Select(r => RegionConverter.ConvertOSMToInternal(r)).ToList();
-
-                foreach (var reg in Regions)
-                    reg.SimplifyAllPolygons(pointFrequency);
+                region.SimplifyAllPolygons(pointFrequency);
 
                 Console.WriteLine("Полигоны упрощены");
 
                 using (StreamWriter sw = new StreamWriter(fileName))
                 {
-                    var serializedResult = JsonConvert.SerializeObject(Regions);
+                    var serializedResult = JsonConvert.SerializeObject(region);
                     sw.Write(serializedResult);
                 }
 
@@ -71,7 +70,8 @@ namespace Akinin_Stanislav_Test_Task_Yolva
         static HttpRequestMessage GetMessageForOSM(string address) 
         {
             string baseUri = "https://nominatim.openstreetmap.org/";
-            string parameters = $"search?q={address}&format=json&polygon_geojson=1";
+            string parameters = $"search?q={address}&limit=1&format=json&polygon_geojson=1";//формат ответа может различаться, 
+            //для обеспечения возможности десериализации ограничил количество результатов
             var result = new HttpRequestMessage(HttpMethod.Get, baseUri + parameters);
             result.Headers.UserAgent.Add(new ProductInfoHeaderValue("Mozilla", "5.0"));
 

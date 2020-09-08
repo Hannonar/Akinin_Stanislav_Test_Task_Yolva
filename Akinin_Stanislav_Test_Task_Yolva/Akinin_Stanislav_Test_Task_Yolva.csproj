@@ -51,7 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\APICaller.cs" />
-    <Compile Include="Models\OSMRegionExternal.cs" />
+    <Compile Include="Models\OSMRegionExternalPolygon.cs" />
+    <Compile Include="Models\OSMTypeOnly.cs" />
+    <Compile Include="Models\OSMRegionExternalMultyPolygon.cs" />
     <Compile Include="Logic\RegionConverter.cs" />
     <Compile Include="Models\RegionInternal.cs" />
     <Compile Include="Program.cs" />

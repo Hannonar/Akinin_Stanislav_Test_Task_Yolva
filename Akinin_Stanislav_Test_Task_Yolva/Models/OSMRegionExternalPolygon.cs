@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Akinin_Stanislav_Test_Task_Yolva.Models
 {
-    public class OSMRegionExternal
+    public class OSMRegionExternalPolygon
     {
         //public int place_id { get; set; }
         //public string licence { get; set; }
@@ -20,13 +20,13 @@ namespace Akinin_Stanislav_Test_Task_Yolva.Models
         //public string type { get; set; }
         //public double importance { get; set; }
         //public string icon { get; set; }
-        public Geojson geojson { get; set; }
+        public GeojsonP geojson { get; set; }
     }
 
-    public class Geojson
+    public class GeojsonP
     {
         public string type { get; set; }
-        public IList<IList<IList<IList<float>>>> coordinates { get; set; }
-        //массив полигонов > полигон > (внешний контур, внутреннее кольцо/дырки) > точки
+        public IList<IList<IList<float>>> coordinates { get; set; }
+        //полигон > (внешний контур, внутреннее кольцо/дырки) > точки
     }
 }

@@ -9,12 +9,13 @@ namespace Akinin_Stanislav_Test_Task_Yolva.Models
 {
     public class RegionInternal
     {
-        private string display_name;
-        private IEnumerable<IEnumerable<Point>> polygons;
+        public RegionInternal()
+        {
 
+        }
         public RegionInternal(string Name, IEnumerable<IEnumerable<IEnumerable<PointF>>> Polygons)
         {
-            this.Name = display_name;
+            this.Name = Name;
             this.Polygons = Polygons.Select(outline => outline.Select(coordList => coordList.ToList()).ToList()).ToList();
         }
 
@@ -32,15 +33,18 @@ namespace Akinin_Stanislav_Test_Task_Yolva.Models
             if (PolygonId < 0 || PolygonId >= Polygons.Count)
                 throw new IndexOutOfRangeException();
 
-            if (PointFrequency <= 1 || Polygons[PolygonId].Count / 3.0 < 3)
-                throw new Exception("Частота точек слишком мала или оставшихся точек недостаточно для формирования полигона");
+            for (var i = 0; i < Polygons[PolygonId].Count; i++) 
+            {
+                if (PointFrequency <= 1 || Polygons[PolygonId][i].Count / 3.0 < 3)
+                    throw new Exception("Частота точек слишком мала или оставшихся точек недостаточно для формирования полигона");
 
 
-            var Points = Polygons[PolygonId].Where((point, i) => (i + 1) % PointFrequency == 0).ToList();
-            Polygons[PolygonId] = Points;
+                var Points = Polygons[PolygonId][i].Where((point, j) => (j + 1) % PointFrequency == 0).ToList();
+                Polygons[PolygonId][i] = Points;
 
-            if(Polygons[PolygonId].First() != Polygons[PolygonId].Last())
-                Polygons[PolygonId].Add(Polygons[PolygonId].First());
+                if (Polygons[PolygonId][i].First() != Polygons[PolygonId][i].Last())
+                    Polygons[PolygonId][i].Add(Polygons[PolygonId][i].First());
+            }
         }
     }
 }
